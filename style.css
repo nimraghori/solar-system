@@ -3,12 +3,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 120px;          /* Section ki height */
+  margin-top: 40px;       /* Upar se neeche karega */
+}
+
 .heading1 {
   color: white;
-  text-align: center;
   text-shadow: 2px 2px 5px gray;
   animation: slideDown 1s ease-out;
+  margin: 0;
+  font-size: 40px;
 }
+
+.side-btn {
+  background: linear-gradient(135deg, #ebbd25, #1e40af);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.side-btn:hover {
+  background: linear-gradient(135deg,#1e40af,#ebbd25);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
 
 @keyframes slideDown {
   from {
@@ -150,7 +177,7 @@
 }
 
 .show-btn:hover{
-  background: linear-gradient(135deg, #1e40af, #2563eb);
+  background: linear-gradient(135deg,#1e40af,#ebbd25);
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
