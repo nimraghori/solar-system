@@ -3,23 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .top-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  height: 120px;          /* Section ki height */
-  margin-top: 40px;       /* Upar se neeche karega */
+  min-height: 120px;
+  margin-top: 40px;
+  flex-wrap: wrap;   
 }
 
 .heading1 {
   color: white;
   text-shadow: 2px 2px 5px gray;
   animation: slideDown 1s ease-out;
-  margin: 0;
   font-size: 40px;
 }
 
+/* Button */
 .side-btn {
   background: linear-gradient(135deg, #ebbd25, #1e40af);
   color: white;
@@ -35,6 +37,31 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;     
+    text-align: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  .heading1 {
+    font-size: 26px;        
+    margin-bottom: 20px;
+  }
+
+  .btn-container {
+    width: 100%;
+  }
+
+  .side-btn {
+    display: inline-block;
+    width: auto;
+  }
+}
+
 
 
 @keyframes slideDown {
